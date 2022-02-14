@@ -1,0 +1,92 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1em;
+}
+table, th, td {
+    border-bottom: 1px solid rgb(128, 128, 128);
+    border-collapse: collapse;
+    padding: .25em;
+}
+table{
+    width: 75%;
+}
+th{
+    width: 10%;
+    background-color: rgb(255, 173, 106);
+}
+#smallBlurb{
+    color: gray;
+}
+a{
+    color: rgb(0, 0, 228);
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(102, 102, 255);
+}
+
+h3{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 1.5em;
+}
+#warning{
+    background-color: rgb(253, 213, 213);
+    margin-top:2em;
+    margin-left: 3em;
+    margin-right: 5em;
+    padding: .2em 1em .2em 5em;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+#logo{
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: lighter;
+    color: white;
+    background-color: rgb(42, 42, 114);
+    padding: 1em 1em 1em 3em;
+    margin-top: -.3em;
+    margin-bottom: 0%;
+    margin-left: -1em;
+    width: 100rem;
+}
+img #logo{
+    float: left;
+    width: auto;
+}
+#decorativeImg{
+    clip-path: inset(0% 0% 50% 0%);
+    margin-bottom: -58vh;
+}
+#underLogo{
+    background-color: orange;
+    color: orange;
+    margin-top: 0em;
+    margin-left: -10em;
+    margin-right:-1em;
+    padding-top: 0em;
+}
+#title{
+    font-family: 'Poppins', sans-serif;
+
+}
+footer{
+    background-color: rgb(66, 66, 66);
+    height: 8em;
+    padding: 5%;
+    margin-bottom: 0%;
+    margin-left: -1em;
+    width: 100%;
+}
+.footerLinks{
+    color: white;
+}
+#float{
+    float: right;
+    width:250px;
+    padding: 1em;
+    padding-right:3em;
+    margin-top:5em;
+    margin-right: -2em;
+    background-color: rgb(221, 220, 220);
+}
