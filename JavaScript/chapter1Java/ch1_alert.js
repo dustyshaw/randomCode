@@ -1,32 +1,105 @@
-alert("Saying hi from a different file");
-let str1 = 'Laurence'; 
-let str2 = "Svekis"; 
-let val1 = undefined;
-let val2 = null;
-let myNum = 1000;
 
-console.log(str1, typeof str1);
-console.log(str2, typeof str2);
-console.log(val1, typeof val1);
-console.log(val2, typeof val2);
-console.log(myNum, typeof myNum);
+// let currentPlayer = 1;
+// while (currentPlayer === 1);
+// {
+//     while (SticksLeft > 3) 
+//     {
+//         let sticksChosen = prompt(`There are ${SticksLeft} Sticks Left.  How many do you want to pick up, Player1?` );
+    
+//         if (sticksChosen > 3 || sticksChosen < 1) 
+//         {
+//             alert(`You can only pick up 1 to 3 sticks per turn`);
+//         }
+//         else
+//         {
+//             SticksLeft = (SticksLeft - sticksChosen);
+//         }
+    
+//         Player2Turn(SticksLeft);
+//         alert(`Player2 chose ${randomNumber} and now there ${Player2SticksLeft} sticks left!`);
+//         currentPlayer = 2;
+//     }
+// }
+// while (currentPlayer === 2)
+// {
+//     while (SticksLeft > 3) 
+//     {
+    
+//         let sticksChosen = prompt(`There are ${SticksLeft} Sticks Left.  How many do you want to pick up, Player1?` );
+    
+//         if (sticksChosen > 3 || sticksChosen < 1) 
+//         {
+//             alert(`You can only pick up 1 to 3 sticks per turn`);
+//         }
+//         else
+//         {
+//             SticksLeft = (SticksLeft - sticksChosen);
+//         }
+    
+        
+//         //alert(`Player2 chose ${randomNumber} and now there ${Player2SticksLeft} sticks left!`);
+//         currentPlayer = 1;
+//     }
+// }
 
-let a = "Hello";
-a = prompt("world");
-console.log(a);
+// function Player2Turn(SticksLeft)
+// {
+//     randomNumber = getRandomInt(4);
+//     if (getRandomInt < 1)
+//     {
+//         randomNumber = getRandomInt(4);
+//     }
+//     else
+//     {
+//         SticksLeft = (SticksLeft - randomNumber);
+//     }
+//     return Player2SticksLeft;
+// }
 
-let m = 5;
-let b = 70;
-let c = "5";
-b++;
-console.log(b);
+// function getRandomInt(max) 
+// {
+//     return Math.floor(Math.random() * max);
+//   }
 
-const myArr2 = [];
-myArr2[10] = 'test'
-console.log(myArr2);
-console.log(myArr2[2]);
+let SticksLeft = 20;
 
-const myArr3 = [3,6,8,9,3,55,553,434];
-myArr3.sort();
-myArr3.length = 0;
-console.log(myArr3[0]);
+let SticksChosen = prompt(`player one, choose how many sticks.  There are ${SticksLeft} left`);
+
+if (SticksChosen <1 || SticksChosen > 3)
+{
+    alert(`You can only chose 1 to 3 sticks.`);
+}
+else
+{
+    SticksLeft = (SticksLeft - SticksChosen);
+}
+
+let player2SticksChosen = prompt(`player two, choose how many sticks.  There are ${SticksLeft} left`);
+if (player2SticksChosen <1 || player2SticksChosen > 3)
+{
+    alert(`You can only chose 1 to 3 sticks.`);
+}
+else
+{
+    SticksLeft = (SticksLeft - player2SticksChosen);
+}
+
+SticksChosen = prompt(`player one, choose how many sticks.  There are ${SticksLeft} left`);
+if (SticksChosen <1 || SticksChosen > 3)
+{
+    alert(`You can only chose 1 to 3 sticks.`);
+}
+else
+{
+    SticksLeft = (SticksLeft - SticksChosen);
+}
+
+player2SticksChosen = prompt(`player two, choose how many sticks.  There are ${SticksLeft} left`);
+if (player2SticksChosen <1 || player2SticksChosen > 3)
+{
+    alert(`You can only chose 1 to 3 sticks.`);
+}
+else
+{
+    SticksLeft = (SticksLeft - player2SticksChosen);
+}
