@@ -5,7 +5,7 @@
 //     while (SticksLeft > 3) 
 //     {
 //         let sticksChosen = prompt(`There are ${SticksLeft} Sticks Left.  How many do you want to pick up, Player1?` );
-    
+
 //         if (sticksChosen > 3 || sticksChosen < 1) 
 //         {
 //             alert(`You can only pick up 1 to 3 sticks per turn`);
@@ -14,7 +14,7 @@
 //         {
 //             SticksLeft = (SticksLeft - sticksChosen);
 //         }
-    
+
 //         Player2Turn(SticksLeft);
 //         alert(`Player2 chose ${randomNumber} and now there ${Player2SticksLeft} sticks left!`);
 //         currentPlayer = 2;
@@ -24,9 +24,9 @@
 // {
 //     while (SticksLeft > 3) 
 //     {
-    
+
 //         let sticksChosen = prompt(`There are ${SticksLeft} Sticks Left.  How many do you want to pick up, Player1?` );
-    
+
 //         if (sticksChosen > 3 || sticksChosen < 1) 
 //         {
 //             alert(`You can only pick up 1 to 3 sticks per turn`);
@@ -35,8 +35,8 @@
 //         {
 //             SticksLeft = (SticksLeft - sticksChosen);
 //         }
-    
-        
+
+
 //         //alert(`Player2 chose ${randomNumber} and now there ${Player2SticksLeft} sticks left!`);
 //         currentPlayer = 1;
 //     }
@@ -60,46 +60,41 @@
 // {
 //     return Math.floor(Math.random() * max);
 //   }
-
+let turns = 0;
 let SticksLeft = 20;
 
-let SticksChosen = prompt(`player one, choose how many sticks.  There are ${SticksLeft} left`);
+//---------------------Loop that determines if SticksLeft is > 3 -----------
 
-if (SticksChosen <1 || SticksChosen > 3)
-{
-    alert(`You can only chose 1 to 3 sticks.`);
-}
-else
-{
-    SticksLeft = (SticksLeft - SticksChosen);
-}
+SticksLeft = Player1Turn(SticksLeft);
+SticksLeft = Player2Turn(SticksLeft);
 
-let player2SticksChosen = prompt(`player two, choose how many sticks.  There are ${SticksLeft} left`);
-if (player2SticksChosen <1 || player2SticksChosen > 3)
+
+//---------------------Functions--------------------------------------------
+function Player1Turn(SticksLeft) 
 {
-    alert(`You can only chose 1 to 3 sticks.`);
-}
-else
-{
-    SticksLeft = (SticksLeft - player2SticksChosen);
+    let SticksChosen = prompt(`player one, choose how many sticks.  There are ${SticksLeft} left`);
+    if (SticksChosen < 1 || SticksChosen > 3) {
+        alert(`You can only chose 1 to 3 sticks.`);
+    }
+    return (SticksLeft - SticksChosen);
 }
 
-SticksChosen = prompt(`player one, choose how many sticks.  There are ${SticksLeft} left`);
-if (SticksChosen <1 || SticksChosen > 3)
+
+function Player2Turn(SticksLeft) 
 {
-    alert(`You can only chose 1 to 3 sticks.`);
-}
-else
-{
-    SticksLeft = (SticksLeft - SticksChosen);
+    let player2SticksChosen = prompt(`play3er two, choose how many sticks.  There are ${SticksLeft} left`);
+    if (player2SticksChosen < 1 || player2SticksChosen > 3) {
+        alert(`You can only chose 1 to 3 sticks.`);
+    }
+    else {
+        return (SticksLeft - player2SticksChosen);
+    } 
 }
 
-player2SticksChosen = prompt(`player two, choose how many sticks.  There are ${SticksLeft} left`);
-if (player2SticksChosen <1 || player2SticksChosen > 3)
+
+function CheckSticks(SticksLeft) 
 {
-    alert(`You can only chose 1 to 3 sticks.`);
-}
-else
-{
-    SticksLeft = (SticksLeft - player2SticksChosen);
+    if (SticksLeft < 3) {
+        console.log("do something here ");
+    }
 }
