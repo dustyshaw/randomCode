@@ -26,7 +26,7 @@
         let SticksChosen = prompt(`player one, choose how many sticks.  There are ${SticksLeft} left`);
         if (SticksLeft > 3) {
             if (SticksChosen < 1 || SticksChosen > 3) {
-                alert(`You can only chose 1 to 3 sticks.`);
+                alert(`You can only chose 1 to 3 sticks.  Moving to next players turn`);
                 return SticksLeft;
             }
             return (SticksLeft - SticksChosen);
