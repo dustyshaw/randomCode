@@ -2,72 +2,75 @@
 <html lang="en">
 <script>
     alert(`players will take turns choosing at least 1 and no more than 3 of the remaining sticks until the sticks are gone.  The player that takes the last stick loses.`);
-    //---------------------Sets sticks left at the beginning to 20.  sets a counter i.
+
     let SticksLeft = 20;
     let i = 0;
+    let turns = 0;
 
     //---------------------Loop that repeats game until someone wins -----------
-    while (i < 1000 ) {
-        SticksLeft = Player1Turn(SticksLeft);
-        SticksLeft = Player2Turn(SticksLeft);
+    while (i < 1000) {
+        SticksLeft = PlayerTurn(SticksLeft, turns);
         i++;
     }
 
     //---------------------Functions--------------------------------------------
-    function Player1Turn(SticksLeft) {
-        if (SticksLeft == 1) {
-            return alert(`Player1 took the last stick! Player2 Won! Better luck next time. `);
+    function PlayerTurn(SticksLeft) {
+
+        // Begins turn by checking to see if someone won
+        CheckWin(SticksLeft, turns);
+
+        /*
+        This if statement decides which players turn it is by finding if the number 
+        of successful plays is even (player one) or odd(player two)
+        */
+        let playerName;
+        if (turns % 2 == 0) {
+            playerName = "Player One";
         }
-        if (SticksLeft == 0)
-        {
-            return alert(`Player1 is an idiot!  They took the last stick.  Player2 Wins`);
+        else {
+            playerName = "Player Two";
         }
 
-        let SticksChosen = prompt(`player one, choose how many sticks.  There are ${SticksLeft} left`);
+        let SticksChosen = prompt(`${playerName}, choose how many sticks.  There are ${SticksLeft} left`);
+
         if (SticksLeft > 3) {
             if (SticksChosen < 1 || SticksChosen > 3) {
                 alert(`You can only chose 1 to 3 sticks.  Moving to next players turn`);
                 return SticksLeft;
             }
-            return (SticksLeft - SticksChosen);
+            else {
+                turns = turns + 1;
+                return (SticksLeft - SticksChosen);
+            }
         }
+
         if (SticksLeft <= 3) {
             if (SticksChosen > SticksLeft) {
                 alert(`You can only chose less sticks then there are sticks left.`);
                 return SticksLeft;
             }
             else {
+                turns = turns + 1;
                 return (SticksLeft - SticksChosen);
             }
         }
+
     }
 
-    function Player2Turn(SticksLeft) {
-        if (SticksLeft == 1) {
-            return alert(`Player2 took the last stick! Player1 Won!`);
-        }
-        if (SticksLeft == 0)
-        {
-            return alert(`You idiot!  Player1 took the last stick.  Player2 Wins`);
-        }
-
-        let player2SticksChosen = prompt(`player two, choose how many sticks.  There are ${SticksLeft} left`);
-        if (SticksLeft > 3) {
-            if (player2SticksChosen < 1 || player2SticksChosen > 3) {
-                alert(`You can only chose 1 to 3 sticks.`);
-                return SticksLeft;
-            }
-            return (SticksLeft - player2SticksChosen);
-        }
-        if (SticksLeft <= 3) {
-            if (player2SticksChosen > SticksLeft) {
-                alert(`You can only chose less sticks then there are sticks left.`);
-                return SticksLeft;
+    // Checks if sticks is zero, then determines which player won.  If neither, returns nothing
+    function CheckWin(SticksLeft, turns) {
+        let WhichPlayer = (turns % 2);
+        if (SticksLeft == 0) {
+            if (WhichPlayer == 0) {
+                let winningmessage = alert(`Player2 lost!`);
+                return winningmessage;
             }
             else {
-                return (SticksLeft - player2SticksChosen);
+                let winningmessage = alert(`Player1 lost!`);
+                return winningmessage;
             }
         }
+        return "";
     }
 </script>
 
