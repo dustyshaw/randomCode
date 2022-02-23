@@ -1,83 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<script>
-    alert(`players will take turns choosing at least 1 and no more than 3 of the remaining sticks until the sticks are gone.  The player that takes the last stick loses.`);
-
-    let SticksLeft = 20;
-    let i = 0;
-    let turns = 0;
-
-    //---------------------Loop that repeats game until someone wins -----------
-    while (i < 1000) {
-        SticksLeft = PlayerTurn(SticksLeft, turns);
-        i++;
-    }
-
-    //---------------------Functions--------------------------------------------
-    function PlayerTurn(SticksLeft) {
-
-        // Begins turn by checking to see if someone won
-        CheckWin(SticksLeft, turns);
-
-        /*
-        This if statement decides which players turn it is by finding if the number 
-        of successful plays is even (player one) or odd(player two)
-        */
-        let playerName;
-        if (turns % 2 == 0) {
-            playerName = "Player One";
-        }
-        else {
-            playerName = "Player Two";
-        }
-
-        let SticksChosen = prompt(`${playerName}, choose how many sticks.  There are ${SticksLeft} left`);
-
-        if (SticksLeft > 3) {
-            if (SticksChosen < 1 || SticksChosen > 3) {
-                alert(`You can only chose 1 to 3 sticks.  Moving to next players turn`);
-                return SticksLeft;
-            }
-            else {
-                turns = turns + 1;
-                return (SticksLeft - SticksChosen);
-            }
-        }
-
-        if (SticksLeft <= 3) {
-            if (SticksChosen > SticksLeft) {
-                alert(`You can only chose less sticks then there are sticks left.`);
-                return SticksLeft;
-            }
-            else {
-                turns = turns + 1;
-                return (SticksLeft - SticksChosen);
-            }
-        }
-
-    }
-
-    // Checks if sticks is zero, then determines which player won.  If neither, returns nothing
-    function CheckWin(SticksLeft, turns) {
-        let WhichPlayer = (turns % 2);
-        if (SticksLeft == 0) {
-            if (WhichPlayer == 0) {
-                let winningmessage = alert(`Player2 lost!`);
-                return winningmessage;
-            }
-            else {
-                let winningmessage = alert(`Player1 lost!`);
-                return winningmessage;
-            }
-        }
-        return "";
-    }
-</script>
+<!-- <link src="SticksGame.js"> -->
 
 <head>
     <title>Pick Up Sticks</title>
 </head>
+<style>
+    #canvas {
+        background-color: rgb(33, 31, 31);
+    }
 
-<body>hi</body>
+    header,
+    body {
+        font-family: monospace;
+        background-color: rgb(33, 31, 31);
+        color: white;
+        text-align: center;
+    }
+    small{
+        position: absolute;
+        text-align: center;
+        left: 0;
+        bottom: 0;
+        color:lightslategray;
+    }
+    ol{
+        color:lightgray;
+        text-align: justify;
+    }
+</style>
+<header>
+    <p>Welcome to...</p>
+    <h1>Pick Up Stix</h1>
+
+</header>
+
+
+<body>
+    
+    <ol>
+        <li>players will take turns choosing at least 1 and no more than 3 of the remaining sticks.</li>
+        <li>players choose sticks until the sticks are gone.</li>  
+        <li>the player that takes the last stick loses.</li>
+    </ol>
+
+    <canvas id="canvas" height="300" width="300"></canvas>
+    <script src="drawStick.js"></script>
+    <!--<script src="SticksGame.js"></script>-->
+    <script src="gameUpdate.js"></script>
+
+    <p>Sticks Left: </p>
+
+    <p>Player <span id="currentPlayer">1</span>, how many sticks would you like to take? </p>
+    <button id="nextButton">next player</button>
+    <span id="buttons">
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+    </span>
+
+</body>
+
+<footer>
+    <small>Made by Dusty Shaw</small>
+</footer>
 
 </html>
