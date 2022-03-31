@@ -2,15 +2,8 @@
     font-family: sans-serif;
 }
 h1 {
-    background-color: lightgreen;
+    text-align: center;
 }
-@media (min-width: 700px){
-    h1 {
-        background-color: lightskyblue;
-    }
-}
-@media (min-width: 1000px) {
-    h1 {
-        background-color: lightpink;
-    }
+#navWrapper {
+    text-align: center;
 }
