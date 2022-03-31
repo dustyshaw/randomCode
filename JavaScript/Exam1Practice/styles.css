@@ -1,0 +1,13 @@
+*{
+    font-family: sans-serif;
+}
+table>tr{
+    background-color: lightcoral;
+}
+h1+p{
+    background-color: aqua;
+}
+h1, button{
+    background-color: black;
+    color: white;
+}

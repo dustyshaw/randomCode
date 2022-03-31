@@ -5,7 +5,6 @@
 
 */
 
-
 function drawVert() {
     const canvas = document.querySelector('#canvas');
 
@@ -14,11 +13,11 @@ function drawVert() {
     }
     const ctx = canvas.getContext('2d');
 
-    let color = ChooseColor(enumTypeNum()); 
+    let color = ChooseColor(enumTypeNum());
     //let color = 1;
 
     // set line stroke and line width
-    ctx.strokeStyle = color ;
+    ctx.strokeStyle = color;
     ctx.lineWidth = 5;
 
     let x = randomNumber();
@@ -39,11 +38,10 @@ function drawHor() {
     }
     const ctx = canvas.getContext('2d');
 
-    let color = ChooseColor(enumTypeNum()); 
-    //let color = 1;
+    let color = ChooseColor(enumTypeNum());
 
     // set line stroke and line width
-    ctx.strokeStyle = color ;
+    ctx.strokeStyle = color;
     ctx.lineWidth = 5;
 
     let x = randomNumber();
@@ -52,47 +50,44 @@ function drawHor() {
     // draw a red line
     ctx.beginPath();
     ctx.moveTo(45, x);
-    ctx.lineTo(250,x2);
+    ctx.lineTo(250, x2);
     ctx.stroke();
 
 }
 
 function randomNumber() {
-    
+
     // makes a random number from 50 to 249 to randomize our lineTo and moveTo numbers
     let randomNum = Math.floor(Math.random() * 250) + 50;
     return randomNum;
 }
 
-function enumTypeNum()
-{
+function enumTypeNum() {
     let num = Math.floor(Math.random() * 5);
     return num;
 }
 
-function ChooseColor(num)
-{
+function ChooseColor(num) {
     switch (num) {
         case 0:
             return ('PaleGreen')
-        break;
+            break;
         case 1:
             return ('LightBlue')
-        break;
+            break;
         case 2:
             return ('Pink')
-        break;
+            break;
         case 3:
-            return('Yellow')
-        break;
+            return ('Yellow')
+            break;
         case 4:
-            return('Orchid')
-        break;
+            return ('Orchid')
+            break;
     }
 }
 
-for (let i = 0; i < 10; i++)
-{
+for (let i = 0; i < 10; i++) {
     drawHor();
     drawVert();
 }

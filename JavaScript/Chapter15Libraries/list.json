@@ -1,0 +1,2 @@
+const url= "list.json";
+fetch(url)

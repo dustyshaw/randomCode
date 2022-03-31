@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>This is my Practice Web Page</h1>
+    <p>My goal with this web page is to accomplish some simple styling rules.</p>
+    <p>I also want to be able to click the button below and have it create a table of numbers and names</p>
+    <button id="button">Click Me!</button>
+    <table id="output">
+        <tr>
+            <th>This is my table</th>
+        </tr>
+        <tr>
+            <td>This is a new table row</td>
+            <td>This is a new collumn</td>
+        </tr>
+    </table>
+    <script>
+        let table = document.getElementById('output');
+        let button = document.getElementById('button');
+
+        button.addEventListener("click", function () {
+            let counter = 0;
+            console.log("creating a new row?");
+            let newTableRow = document.createElement('tr');
+            newTableRow.addEventListener("click", function (counter){
+                newTableRow.style.backgroundColor="red";
+                counter += 1;
+                return counter;
+            })
+            newTableRow.innerHTML = `<td>click me to change color</td><td>${counter}</td>`;
+            table.appendChild(newTableRow);
+        });
+    </script>
+</body>
+
+</html>
