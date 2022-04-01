@@ -4,6 +4,42 @@
 h1 {
     text-align: center;
 }
+header {
+    background-color: black;
+}
+#logo {
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(232, 128, 0);
+}
 #navWrapper {
     text-align: center;
+}
+#navWrapper button {
+    background-color: black;
+    color: white;
+    border-color: white;
+    /* border-radius: 40%; */
+    border-style: none;
+    border-width: 1px;
+    font-size: small;
+}
+#navWrapper button:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#recentPostsWrapper
+{
+    text-decoration: none;
+    background-color: whitesmoke;
+}
+#postLink {
+    text-decoration: none;
+    color: black;
+}
+#recentPost1Wrapper {
+    padding: 2%;
+    border: solid;
+    width: 60%;
+    margin: 2%;
+    background-color: white;
 }
