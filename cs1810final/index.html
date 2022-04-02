@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyBlog</title>
+    <!-- Boostrap -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hubballi&family=Julius+Sans+One&family=Jura:wght@300&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
 </head>
+<!-- font-family: 'Hubballi', cursive;
+font-family: 'Julius Sans One', sans-serif;
+font-family: 'Jura', sans-serif;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Source Sans Pro', sans-serif; -->
 <header>
-    <h1 id="logo">TheBlog.Com</h1>
+    <p id="logo">TheBlog.Com</p>
     <div id="navWrapper">
         <nav>
             <button>All Posts</button>
@@ -25,36 +37,36 @@
 
 <body>
     <figure>
-        <img src="Jupiter-A-Mind-of-Limits.jpg" width="100%">
-        <figcaption>This image is from NASA</figcaption>
+        <img src="Jupiter-A-Mind-of-Limits-cropped-top.jpg" width="100%">
+        <figcaption id="figCaption">NASA</figcaption>
     </figure>
 
-    <quote>"Curiosity is the essence of our existence"</quote>
+    <quote id="quote">"Curiosity is the essence of our existence"</quote>
     <p><small>Gene Cernan</small></p>
     <hr>
     <div id="recentPostsWrapper">
+        <p id="recentPostsHeader">Recent Posts</p>
         <div id="recentPost1Wrapper">
-            <p>Recent Posts</p>
             <a id="postLink" href="Post1.html">
                 <h1>Duis Aute Irure</h1>
-                <p><small>01/15/2032</small></p>
                 <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et
                     dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip
                     ex ea commodo conseq ... </p>
+                <p><small>01/15/2032</small></p>
             </a>
         </div>
     </div>
     <hr>
-    <div>
-        <h1>Tags</h1><span>find something you like by type: </span>
-        <ul>
-            <li>Life on Mars</li>
-            <li>Astronauts</li>
-            <li>Galaxies</li>
-            <li>Neptune and Nebula</li>
-        </ul>
+    <div id="tagsWrapper">
+        <p id="tagsHeader">Tags</p><span><small> find something you like by type:</small> </span>
+        <div id="tagsList">
+            <p>Life on Mars</p>
+            <p>Astronauts</p>
+            <p>Galaxies</p>
+            <p>Neptune and Nebula</p>
+        </div>
     </div>
     <hr>
     <div id="emailListWrapper">
@@ -73,7 +85,7 @@
         crossorigin="anonymous"></script>
 </body>
 <footer>
-
+    <div id="footerTextWrapper"><p>links here lol</p><p>links here lol</p><p>links here lol</p></div>
 </footer>
 
 </html>

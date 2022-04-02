@@ -1,16 +1,27 @@
-* {
+/* * {
     font-family: sans-serif;
-}
+} */
 h1 {
     text-align: center;
+    font-family: 'Julius Sans One';
 }
 header {
     background-color: black;
+    font-family: 'Julius Sans One';
+}
+figcaption {
+    color: grey;
+    font-size: x-small;
+}
+#quote {
+    text-align: center;
 }
 #logo {
+    color: rgb(232, 128, 0);
+    font-family: 'Julius Sans One', sans-serif;
     text-decoration: none;
     font-weight: bolder;
-    color: rgb(232, 128, 0);
+    letter-spacing: 3px;
 }
 #navWrapper {
     text-align: center;
@@ -19,27 +30,59 @@ header {
     background-color: black;
     color: white;
     border-color: white;
-    /* border-radius: 40%; */
     border-style: none;
-    border-width: 1px;
     font-size: small;
+    letter-spacing: 1px;
+    padding-right: 8%;
 }
-#navWrapper button:hover{
-    background-color: rgba(255, 255, 255, 0.3);
-}
-#recentPostsWrapper
-{
-    text-decoration: none;
-    background-color: whitesmoke;
+#navWrapper button:hover {
+    text-decoration: underline;
 }
 #postLink {
     text-decoration: none;
     color: black;
 }
+#recentPostsHeader, #tagsHeader {
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size:large ;
+    letter-spacing: 10px;
+}
+#tagsWrapper {
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
 #recentPost1Wrapper {
     padding: 2%;
     border: solid;
+    border-width: .5px;
+    border-radius: 8px;
     width: 60%;
     margin: 2%;
     background-color: white;
+}
+#recentPost1Wrapper:hover {
+    background-color: rgba(211, 211, 211, 0.309);
+}
+#tagsWrapper {
+    background-color: rgb(125, 156, 211);
+}
+#tagsList {
+    font-family: 'Source Code Pro', monospace;
+}
+#emailListWrapper {
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+#footerTextWrapper {
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+footer {
+    background-color: rgb(6, 2, 33);
+    color: gray;
 }
