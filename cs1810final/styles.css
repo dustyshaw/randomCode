@@ -3,7 +3,7 @@ h1 {
     font-family: 'Julius Sans One';
 }
 header {
-    background-color: black;
+    background-color: inherit;
     font-family: 'Julius Sans One';
 }
 figcaption {
@@ -21,9 +21,9 @@ figcaption {
     text-align: center;
 }
 #navWrapper button {
-    background-color: black;
+    font-family: 'Julius Sans One', sans-serif;
+    background-color: inherit;
     color: white;
-    border-color: white;
     border-style: none;
     font-size: small;
     letter-spacing: 1px;
