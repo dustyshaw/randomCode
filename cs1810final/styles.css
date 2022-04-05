@@ -42,18 +42,35 @@ figcaption {
 
 body {
     background-image: url('Jupiter-A-Mind-of-Limits.jpg');
+    background-size: cover;
+    background-position: center;
     background-color: #cccccc;
-    background-size: auto;
 }
+
 #mainPageImage {
     height: 500px;
 }
 #quote {
     color: whitesmoke;
+    background-color: black;
     font-family: 'Jura', sans-serif;
     position: absolute;
     top: 60%;
     left: 10%;
+}
+@media (min-width=500px) {
+    body{
+        background-position: left;
+        background-size: contain;
+    }
+    #quote {
+        color: whitesmoke;
+        background-color: inherit;
+        font-family: 'Jura', sans-serif;
+        position: absolute;
+        top: 60%;
+        left: 10%;
+    }
 }
 #postLink {
     text-decoration: none;
