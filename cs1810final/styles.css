@@ -18,20 +18,28 @@ figcaption {
     letter-spacing: 3px;
 }
 #navWrapper {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
-#navWrapper button {
+
+/* -----------------------nav bar--------------------------------- */
+.listItem {
     font-family: 'Julius Sans One', sans-serif;
     background-color: inherit;
     color: white;
     border-style: none;
     font-size: small;
     letter-spacing: 1px;
-    padding-right: 8%;
+    display: flex;
+    flex-direction: column;
+    
 }
-#navWrapper button:hover {
+#navWrapper .listItem:hover {
     text-decoration: underline;
 }
+
 body {
     background-image: url('Jupiter-A-Mind-of-Limits.jpg');
     background-color: #cccccc;
@@ -113,4 +121,13 @@ body {
 footer {
     background-color: rgb(90, 90, 90);
     color: rgb(209, 209, 209);
+}
+@media (min-width: 500px) {
+    .listItem{
+        background-color: rgba(0, 0, 255, 0.342);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    } 
 }
