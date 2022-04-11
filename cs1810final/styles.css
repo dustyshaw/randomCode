@@ -93,12 +93,13 @@ body {
     display: grid;
     grid-template-columns: 100px 400px 400px 100px;
     grid-template-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 30px;
 }
 
 #recentPost1Wrapper {
     padding: 2%;
-    border: solid;
+    border: none;
+    box-shadow: -10px 15px 10px .3px rgba(114, 114, 114, 0.459);
     border-width: .5px;
     border-radius: 8px;
     grid-column: 2/3;
