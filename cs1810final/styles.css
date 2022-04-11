@@ -70,6 +70,9 @@ body {
     font-size: large;
     letter-spacing: 10px;
     background-color: white;
+    margin-bottom: -35px;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 #tagsWrapper {
@@ -109,14 +112,10 @@ body {
     border: solid;
     border-width: .5px;
     border-radius: 8px;
-    width: 400px;
+    width: 100%;
     grid-column: 3/4;
     /* margin-left: 2%;  */
     background-color: white;
-}
-
-.side {
-    grid-area: S;
 }
 
 #recentPost1Wrapper:hover {

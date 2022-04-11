@@ -81,3 +81,41 @@ nav .listItem:hover {
         font-size: 2em;
     }
 }
+
+
+#recentPostsWrapper {
+    background-color: white;
+    margin-bottom: -15px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: grid;
+    grid-template-columns: 100px 400px 400px 100px;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+#recentPost1Wrapper {
+    padding: 2%;
+    border: solid;
+    border-width: .5px;
+    border-radius: 8px;
+    grid-column: 2/3;
+    width: 400px;
+    /* margin-left: 2%; */
+    /* background-color: white; */
+}
+
+#recentPost2Wrapper {
+    padding: 2%;
+    border: solid;
+    border-width: .5px;
+    border-radius: 8px;
+    width: 100%;
+    grid-column: 3/4;
+    /* margin-left: 2%;  */
+    background-color: white;
+}
+
+#recentPost1Wrapper:hover {
+    background-color: rgba(211, 211, 211, 0.309);
+}
