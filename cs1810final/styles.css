@@ -93,24 +93,25 @@ body {
     display: grid;
     grid-template-columns: 100px 400px 400px 100px;
     grid-template-rows: auto;
-    grid-gap: 30px;
+    grid-gap: 40px;
 }
 
 #recentPost1Wrapper {
     padding: 2%;
-    border: none;
-    box-shadow: -10px 15px 10px .3px rgba(114, 114, 114, 0.459);
+    border: solid;
+    border-color: darkgray;
+    box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
     border-width: .5px;
     border-radius: 8px;
     grid-column: 2/3;
     width: 400px;
-    /* margin-left: 2%; */
-    /* background-color: white; */
 }
 
 #recentPost2Wrapper {
     padding: 2%;
     border: solid;
+    border-color: darkgray;
+    box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
     border-width: .5px;
     border-radius: 8px;
     width: 100%;
@@ -120,6 +121,9 @@ body {
 }
 
 #recentPost1Wrapper:hover {
+    background-color: rgba(211, 211, 211, 0.309);
+}
+#recentPost2Wrapper:hover {
     background-color: rgba(211, 211, 211, 0.309);
 }
 
