@@ -16,6 +16,7 @@ figcaption {
     text-decoration: none;
     font-weight: bolder;
     letter-spacing: 3px;
+    font-size: 20px;
 }
 #recentPostTitle {
     font-size: 1.5em;
@@ -164,7 +165,8 @@ nav {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    min-height: 35px;
+    height: 60px;
+    font-size: 20px;
     align-items: center;
 }
 .listItem {
@@ -172,7 +174,6 @@ nav {
     background-color: inherit;
     color: white;
     border-style: none;
-    font-size: small;
     letter-spacing: 1px;
 }
 .listItem a{
@@ -191,7 +192,7 @@ nav .listItem:hover {
         background-size: cover;
     }
     #mainPageImage {
-        height: 300px;
+        height: 450px;
     }
     #recentPostTitle {
         font-size: 2em;
