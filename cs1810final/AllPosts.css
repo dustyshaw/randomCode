@@ -19,6 +19,24 @@ figcaption {
     letter-spacing: 3px;
 }
 
+#tagsWrapper {
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-image: linear-gradient(45deg, #6955c395, #88203daa);
+    /* margin-top: px; */
+    /* margin-bottom: -15px; */
+}
+
+#tagsHeader{
+    text-align: center;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 10px;
+}
+
 #footerTextWrapper {
     padding-left: 5%;
     padding-top: 5%;
@@ -51,6 +69,7 @@ nav {
     min-height: 35px;
     align-items: center;
 }
+
 .listItem {
     font-family: 'Julius Sans One', sans-serif;
     background-color: inherit;
@@ -58,9 +77,11 @@ nav {
     border-style: none;
     letter-spacing: 1px;
 }
+
 .listItem a{
     color: white;
 }
+
 nav .listItem:hover {
     text-decoration: underline;
 }
