@@ -61,13 +61,13 @@ nav {
 .listItem {
     font-family: 'Julius Sans One', sans-serif;
     background-color: inherit;
-    color: white;
+    color: black;
     border-style: none;
     letter-spacing: 1px;
 }
 
 .listItem a {
-    color: white;
+    color: black;
 }
 
 nav .listItem:hover {
