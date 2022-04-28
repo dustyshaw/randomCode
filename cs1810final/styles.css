@@ -2,14 +2,17 @@ h1 {
     text-align: center;
     font-family: 'Julius Sans One';
 }
+
 header {
     background-color: inherit;
     font-family: 'Julius Sans One';
 }
+
 figcaption {
     color: grey;
     font-size: x-small;
 }
+
 #logo {
     color: rgb(232, 128, 0);
     font-family: 'Julius Sans One', sans-serif;
@@ -18,18 +21,22 @@ figcaption {
     letter-spacing: 3px;
     font-size: 20px;
 }
+
 #recentPostTitle {
     font-size: 1.5em;
 }
+
 body {
     background-image: url('Jupiter-A-Mind-of-Limits.jpg');
     background-size: cover;
     background-position: center;
     background-color: #cccccc;
 }
+
 #mainPageImage {
     height: 150px;
 }
+
 #quote {
     color: whitesmoke;
     background-color: inherit;
@@ -38,6 +45,7 @@ body {
     top: 60%;
     left: 10%;
 }
+
 /* @media (min-width=500px) {
     body{
         background-position: left;
@@ -56,7 +64,8 @@ body {
     text-decoration: none;
     color: black;
 }
-#tagsHeader, #emailListHeader{
+
+#tagsHeader, #emailListHeader {
     text-align: center;
     font-family: 'Julius Sans One', sans-serif;
     font-weight: bold;
@@ -86,27 +95,28 @@ body {
     margin-bottom: -15px;
 }
 
-/* full scale version of grid on recent posts section */
+/* -------full scale version of grid on recent posts section ------*/
 #recentPostsWrapper {
     background-color: white;
     margin-bottom: -15px;
     padding-top: 2%;
     padding-bottom: 2%;
-    display: grid;
-    grid-template-columns: 100px 400px 400px 400px 100px;
-    grid-template-rows: auto;
-    grid-gap: 40px;
+    display: flex;
+    max-width: 100%;
+    justify-content: space-around;
 }
 
 #recentPost1Wrapper {
     padding: 2%;
+    margin-left: 10px;
+    margin-right: 10px;
     border: solid;
     border-color: darkgray;
     box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
     border-width: .5px;
     border-radius: 8px;
-    grid-column: 2/3;
-    width: 400px;
+    flex-wrap: wrap;
+    width: fit-content;
     height: fit-content;
 }
 
@@ -117,8 +127,8 @@ body {
     box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
     border-width: .5px;
     border-radius: 8px;
-    width: 100%;
-    grid-column: 3/4;
+    width: fit-content;
+    flex-wrap: wrap;
     background-color: white;
 }
 
@@ -129,9 +139,10 @@ body {
     box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
     border-width: .5px;
     border-radius: 8px;
-    width: 100%;
-    grid-column: 4/5;
+    width: fit-content;
+    flex-wrap: wrap;
     background-color: white;
+    
 }
 
 #recentPost1Wrapper:hover {
@@ -176,6 +187,7 @@ body {
     padding-top: 5%;
     padding-bottom: 5%;
 }
+
 footer {
     background-color: rgb(90, 90, 90);
     color: rgb(209, 209, 209);
@@ -200,7 +212,7 @@ nav {
     letter-spacing: 1px;
 }
 
-.listItem a{
+.listItem a {
     color: white;
 }
 
@@ -209,18 +221,69 @@ nav .listItem:hover {
 }
 
 @media (min-width: 500px) {
-    
-    nav{  
+
+    nav {
         flex-direction: row;
         justify-content: space-around;
-    } 
+    }
+
     body {
         background-size: cover;
     }
+
     #mainPageImage {
         height: 450px;
     }
+
     #recentPostTitle {
         font-size: 2em;
     }
+
+    /* #recentPostsWrapper {
+        background-color: white;
+        margin-bottom: -15px;
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        display: grid;
+        grid-template-columns: 100px 400px 400px 400px 100px;
+        grid-template-rows: auto;
+        grid-gap: 40px;
+    }
+
+    #recentPost1Wrapper {
+        padding: 2%;
+        border: solid;
+        border-color: darkgray;
+        box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
+        border-width: .5px;
+        border-radius: 8px;
+        grid-column: 2/3;
+        width: 400px;
+        height: fit-content;
+    }
+
+    #recentPost2Wrapper {
+        padding: 2%;
+        border: solid;
+        border-color: darkgray;
+        box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
+        border-width: .5px;
+        border-radius: 8px;
+        width: 400px;
+        grid-column: 3/4;
+        background-color: white;
+    }
+
+    #recentPost3Wrapper {
+        padding: 2%;
+        border: solid;
+        border-color: darkgray;
+        box-shadow: -10px 10px 15px .3px rgba(114, 114, 114, 0.459);
+        border-width: .5px;
+        border-radius: 8px;
+        width: 400px;
+        grid-column: 4/5;
+        background-color: white;
+    } */
 }
