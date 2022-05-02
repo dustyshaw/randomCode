@@ -67,3 +67,7 @@ main {
 #postDetails ul {
     font-family: 'Source Code Pro', monospace;
 }
+
+img {
+    width: 600px;
+}
