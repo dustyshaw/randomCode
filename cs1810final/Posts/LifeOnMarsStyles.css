@@ -1,4 +1,4 @@
-css
+
 * {
     padding-left: 3%;
     padding-right: 3%;
@@ -37,6 +37,7 @@ css
 #postWrapper p {
     font-family: 'Hubballi', cursive;
     font-size: larger;
+    width: 500px;
 }
 
 figcaption {
@@ -59,5 +60,10 @@ main {
 
 #postDetails {
     background-image: linear-gradient(45deg, #6955c395, #88203daa);
-    
+    width: 200px;
+    color: white;
+}
+
+#postDetails ul {
+    font-family: 'Source Code Pro', monospace;
 }
