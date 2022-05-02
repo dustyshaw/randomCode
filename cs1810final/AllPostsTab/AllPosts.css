@@ -103,38 +103,35 @@ nav .listItem:hover {
 }
 
 
-#recentPostsWrapper {
+#postsWrapper {
     background-color: white;
     margin-bottom: -15px;
     padding-top: 2%;
     padding-bottom: 2%;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    /* display: grid;
     grid-template-columns: 100px 400px 400px 100px;
     grid-template-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 10px; */
 }
 
-#recentPost1Wrapper {
-    padding: 2%;
-    border: solid;
-    border-width: .5px;
-    border-radius: 8px;
-    grid-column: 2/3;
+#postsWrapper :nth-child(1) { 
+    order: 1; 
     width: 400px;
-    /* margin-left: 2%; */
-    /* background-color: white; */
 }
-
-#recentPost2Wrapper {
-    padding: 2%;
-    border: solid;
-    border-width: .5px;
-    border-radius: 8px;
-    width: 100%;
-    grid-column: 3/4;
-    /* margin-left: 2%;  */
-    background-color: white;
-}
+#postsWrapper :nth-child(2) { order: 1; 
+    width: 400px; }
+#postsWrapper :nth-child(3) { order: 1; 
+    width: 400px;}
+#postsWrapper :nth-child(4) { order: 1;
+    width: 400px; }
+#postsWrapper :nth-child(5) { order: 1;
+    width: 400px; }
+#postsWrapper :nth-child(6) { order: 1;
+    width: 400px;
+ }
 
 #recentPost1Wrapper:hover {
     background-color: rgba(211, 211, 211, 0.309);
